@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000
 
 //MIDDLEWARE
 app.use(express.json())
+app.use(express.urlencoded({ extended:true }))
 
 //ROUTES
 app.use('/api/v1/auth', authRoutes )

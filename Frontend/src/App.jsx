@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import './index.css'
 import './App.css'
 
 function App() {
@@ -7,10 +7,9 @@ function App() {
 
   return (
     <>
-     <div>
-      app
-     </div>
-        
+    <h1 className="text-3xl text-center justify-center font-bold">
+      FrontEnd
+    </h1>     
     </>
   )
 }
