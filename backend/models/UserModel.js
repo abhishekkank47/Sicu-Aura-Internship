@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
     },
     registrationDate:{
         type:Date,
-        require:true,
+        default: Date.now,
     },
     ambulance:{
         type:Number,
@@ -56,7 +56,7 @@ const userSchema = new mongoose.Schema({
         maxLength: [10, "PHONE NUMBER MUST CONTAIN EXACT 10 DIGITS"]
     },
     registratonCertificate:{
-        type:File,
+        type:String,
         require:true,
     },
     password:{
