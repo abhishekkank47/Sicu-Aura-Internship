@@ -1,22 +1,22 @@
 import Layout from '../components/Layout'
 import './App.css'
-
-
-
+import {Routes,Route} from 'react-router-dom'
+import RegisterPage from '../pages/RegisterPage'
+import LoginPage from '../pages/LoginPage'
+import AdminDashboard from '../pages/AdminDashboard'
 
 function App() {
 
   return (
     <>
-    <Layout>
-              <div class="text-center m-0 p-0">
-            <div class="row w-100">
-              <div class="col-4 logoSection">col-4</div>
-              <div class="col-4 wholeForm form1">col-4</div>
-              <div class="col-4 wholeForm form2">col-4</div>
-            </div>
-          </div>
-    </Layout>     
+    <Routes>
+      <Route path="/" element={<RegisterPage/>}/>
+      <Route path="/sign-in" element={<LoginPage/>}/>
+    </Routes>
+    <Routes>
+    <Route path="/dashboard" element={<AdminDashboard/>}/>
+    </Routes>  
+ 
     </>
   )
 }
